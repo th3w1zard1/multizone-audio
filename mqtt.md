@@ -57,8 +57,10 @@ playpause, play, stop, playresume, shuffle_songs, volumedown, volumeup
 
 ## State
 ```
-media/study/kodi/status/notification/Player.OnPlay {"val": "{\"item\":{\"id\":14996,\"type\":\"episode\"},\"player\":{\"playerid\":1,\"speed\":1}}"}
-media/study/kodi/status/notification/Player.OnStop {"val": "{\"end\":true,\"item\":{\"id\":14996,\"type\":\"episode\"}}"}
+media/den/kodi/status/notification/Player.OnPlay {"val": "{\"item\":{\"id\":14996,\"type\":\"episode\"},\"player\":{\"playerid\":1,\"speed\":1}}"}
+media/den/kodi/status/notification/Player.OnStop {"val": "{\"end\":true,\"item\":{\"id\":14996,\"type\":\"episode\"}}"}
+media/bedroom/kodi/status/notification/Player.OnPlay {"val": "{\"item\":{\"id\":14996,\"type\":\"episode\"},\"player\":{\"playerid\":1,\"speed\":1}}"}
+media/bedroom/kodi/status/notification/Player.OnStop {"val": "{\"end\":true,\"item\":{\"id\":14996,\"type\":\"episode\"}}"}
 
 ```
 

@@ -1,7 +1,6 @@
 {
-    "name": "bedroom-mark",
-    "name_": "bedroom_mark",
-    "Name": "Bedroom Mark",
+    "name": "den",
+    "Name": "Den",
 
     "path": {
         "media-root": "/mnt/md6-media",
@@ -10,18 +9,21 @@
 
     "mopidy": {
         "host": "media",
-        "http_port": "6692",
-        "mpd_port": "6612"
+        "http_port": "6689",
+        "mpd_port": "6609"
     },
     "airplay": {
-        "port": "5112"
+        "port": "5109"
     },
     "mqtt": {
         "host": "pixie3"
     },
+    "kodi": {
+      "port": 8080
+    },
     "snapcast": {
         "host": "media",
-        "opts": "-s Device --mixer=hardware:Speaker"
+        "opts": "--mixer=hardware"
     },
 
     "dev": false

@@ -54,8 +54,8 @@ enabled = false
 # dbus_start_session = dbus-daemon --fork --session --print-address=1 --print-pid=1
 
 [iris]
-country = GB
-locale = en_GB
+country = US
+locale = en_US
 snapcast_enabled = true
 snapcast_host = {{snapcast.host}}
 
