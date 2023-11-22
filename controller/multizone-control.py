@@ -33,7 +33,7 @@ def parse_zone(topic):
     return topic.split('/')[1]
 
 def on_mopidy_status(mosq, obj, msg):
-    print("mopidy: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+    print(f"mopidy: {msg.topic} {str(msg.qos)} {str(msg.payload)}")
     if msg.payload == b'playing':
         zone = parse_zone(msg.topic)
         msgs = [
@@ -46,7 +46,7 @@ def on_mopidy_status(mosq, obj, msg):
 
 
 def on_spotify_status(mosq, obj, msg):
-    print("spotify: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+    print(f"spotify: {msg.topic} {str(msg.qos)} {str(msg.payload)}")
     zone = parse_zone(msg.topic)
     msgs = [
         Message(f"{TOPIC_ROOT}/{zone}/mopidy/c/plb", "pause"),
@@ -57,7 +57,7 @@ def on_spotify_status(mosq, obj, msg):
         mosq.publish(m.topic, m.payload)
 
 def on_airplay_status(mosq, obj, msg):
-    print("airplay: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+    print(f"airplay: {msg.topic} {str(msg.qos)} {str(msg.payload)}")
     if msg.payload == b'playing':
         zone = parse_zone(msg.topic)
         msgs = [
@@ -69,7 +69,7 @@ def on_airplay_status(mosq, obj, msg):
             mosq.publish(m.topic, m.payload)
 
 def on_kodi_play(mosq, obj, msg):
-    print("kodi: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+    print(f"kodi: {msg.topic} {str(msg.qos)} {str(msg.payload)}")
     zone = parse_zone(msg.topic)
     msgs = [
         Message(f"{TOPIC_ROOT}/{zone}/mopidy/c/plb", "pause"),
